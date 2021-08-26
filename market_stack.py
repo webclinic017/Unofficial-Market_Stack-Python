@@ -321,4 +321,4 @@ class MarketStack:
 
 
 if __name__ == '__main__':
-    print("market_stack.py file excicuted")
+    print("market_stack.py file executed")
