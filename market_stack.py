@@ -1,3 +1,5 @@
+from sensitive import api_key
+
 import requests
 
 # Error Codes
@@ -17,7 +19,7 @@ class MarketStack:
     def __init__(self, ticker):
         self.ticker = ticker.upper().strip()
 
-        self.api_key = "Enter Your API Key Here"
+        self.api_key = api_key
 
     def latest_end_of_day_data(self):
         try:
