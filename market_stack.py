@@ -38,7 +38,7 @@ class MarketStack:
 
     def ticker_information(self):
         """
-        Obtain information about a specific ticker symbol by attach it to your API request
+        Obtain information about a specific ticker symbol by attach it to your API request.
         """
         try:
             params = {
@@ -54,7 +54,7 @@ class MarketStack:
 
     def ticker_information_eod(self):
         """
-        Obtain end-of-day data for a specific stock ticker by attaching /eod to your URL, e.g. /tickers/AAPL/eod. This route supports parameters of the End-of-day Data endpoint.
+        Obtain end-of-day data for a specific stock ticker. This route supports parameters of the End-of-day Data endpoint.
         """
         try:
             params = {
@@ -71,7 +71,7 @@ class MarketStack:
 
     def ticker_information_eod_specific_date(self, date):
         """
-        Specify a date in YYYY-MM-DD format. You can also specify an exact time in ISO-8601 date format, e.g. 2020-05-21T00:00:00+0000. Example: /eod/2020-01-01 or /intraday/2020-01-01
+        Specify a date in YYYY-MM-DD format. You can also specify an exact time in ISO-8601 date format, e.g. 2020-05-21T00:00:00+0000.
         """
         try:
             params = {
@@ -87,7 +87,7 @@ class MarketStack:
 
     def ticker_information_eod_latest(self):
         """
-        Specify a date in YYYY-MM-DD format. You can also specify an exact time in ISO-8601 date format, e.g. 2020-05-21T00:00:00+0000. Example: /eod/2020-01-01 or /intraday/2020-01-01
+        Specify a date in YYYY-MM-DD format. You can also specify an exact time in ISO-8601 date format, e.g. 2020-05-21T00:00:00+0000.
         """
         try:
             params = {
@@ -103,7 +103,7 @@ class MarketStack:
 
     def ticker_information_splits(self, limit=100):
         """
-       Obtain end-of-day data for a specific stock ticker by attaching /splits to your URL, e.g. /tickers/AAPL/splits. This route supports parameters like date period date_from and date_to and also you can sort the results DESC or ASC.
+       Obtain end-of-day data for a specific stock ticker (splits). This route supports parameters like date period date_from and date_to and also you can sort the results DESC or ASC.
        limit = [Optional] Specify a pagination limit (number of results per page) for your API request. Default limit value is 100, maximum allowed limit value is 1000.
         """
         try:
@@ -122,7 +122,7 @@ class MarketStack:
 
     def ticker_information_intraday(self, interval, limit=100):
         """
-       Obtain real-time & intraday data for a specific stock ticker by attaching /intraday to your URL, e.g. /tickers/AAPL/intraday. This route supports parameters of the Intraday Data endpoint.
+       Obtain real-time & intraday data for a specific stock ticker (intraday). This route supports parameters of the Intraday Data endpoint.
        interval = [Optional] Specify your preferred data interval. Available values: 1min, 5min, 10min, 15min, 30min, 1hour (Default), 3hour, 6hour, 12hour and 24hour.
        limit = [Optional] Specify a pagination limit (number of results per page) for your API request. Default limit value is 100, maximum allowed limit value is 1000.
         """
@@ -143,7 +143,7 @@ class MarketStack:
 
     def ticker_information_intraday_latest(self, interval, limit=100):
         """
-       Obtain real-time & intraday data for a specific stock ticker by attaching /intraday to your URL, e.g. /tickers/AAPL/intraday. This route supports parameters of the Intraday Data endpoint.
+       Obtain real-time & intraday data for a specific stock ticker (intraday latest). This route supports parameters of the Intraday Data endpoint.
        interval = [Optional] Specify your preferred data interval. Available values: 1min, 5min, 10min, 15min, 30min, 1hour (Default), 3hour, 6hour, 12hour and 24hour.
        limit = [Optional] Specify a pagination limit (number of results per page) for your API request. Default limit value is 100, maximum allowed limit value is 1000.
         """
@@ -202,7 +202,7 @@ class MarketStack:
 
     def exchanges_specific(self, mic):
         """
-        Obtain information about a specific stock exchange by attaching its MIC identification to your API request URL, e.g. /exchanges/XNAS.
+        Obtain information about a specific stock exchange by attaching its MIC identification.
         """
         try:
             params = {
@@ -219,7 +219,7 @@ class MarketStack:
 
     def exchanges_tickers(self, mic):
         """
-        Obtain all available tickers for a specific exchange by attaching the exchange MIC as well as /tickers, e.g. /exchanges/XNAS/tickers.
+        Obtain all available tickers for a specific exchange by attaching the exchange MIC.
         """
         try:
             params = {
@@ -236,7 +236,7 @@ class MarketStack:
 
     def exchanges_eod(self, mic):
         """
-        Obtain end-of-day data for all available tickers from a specific exchange, e.g. /exchanges/XNAS/eod. For parameters, refer to End-of-day Data endpoint.
+        Obtain end-of-day data for all available tickers from a specific exchange. For parameters, refer to End-of-day Data endpoint.
         """
         try:
             params = {
@@ -253,7 +253,7 @@ class MarketStack:
 
     def exchanges_intraday(self, mic):
         """
-        Obtain intraday data for tickers from a specific exchange, e.g. /exchanges/XNAS/intraday. For parameters, refer to Intraday Data endpoint.
+        Obtain intraday data for tickers from a specific exchange. For parameters, refer to Intraday Data endpoint.
         """
         try:
             params = {
@@ -270,7 +270,7 @@ class MarketStack:
 
     def exchanges_eod_latest(self, mic):
         """
-        Obtain the latest end-of-day data for tickers of the given exchange. Example: /exchanges/XNAS/eod/latest
+        Obtain the latest end-of-day data for tickers of the given exchange.
         """
         try:
             params = {
@@ -287,7 +287,7 @@ class MarketStack:
 
     def exchanges_intraday_latest(self, mic):
         """
-        Obtain the latest intraday data for tickers of the given exchange. Example: /exchanges/IEXG/intraday/latest
+        Obtain the latest intraday data for tickers of the given exchange.
         """
         try:
             params = {
@@ -304,7 +304,7 @@ class MarketStack:
 
     def timezones(self):
         """
-        Using the timezones API endpoint you will be able to look up information about all supported timezones
+        Using the timezones API endpoint you will be able to look up information about all supported timezones.
         """
         try:
             params = {
@@ -318,3 +318,7 @@ class MarketStack:
             return api_response
         except Exception as e:
             print(e)
+
+
+if __name__ == '__main__':
+    print("market_stack.py file excicuted")
